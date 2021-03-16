@@ -1,0 +1,211 @@
+.swal2-popup,
+.swal2-container {
+  z-index: 9999;
+}
+
+.swal2-confirm {
+  order: 2;
+}
+
+//文字水平置中
+.textCenter {
+  text-align: center;
+}
+
+/* flex utility */
+.flex {
+  display: flex;
+}
+
+/* sortBtn */
+.sortBtn {
+  padding: 4px 12px;
+
+  i {
+    font-weight: 700;
+    font-size: 1rem !important;
+    margin: 0 !important;
+  }
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+/* filter container 篩選列 */
+.filter-container {
+  .el-select {
+    margin-right: 0.5rem;
+  }
+}
+
+/* custom dialog */
+.el-dialog {
+  border-radius: 0.5rem;
+}
+
+.el-dialog__header {
+  border-radius: 0.5rem 0.5rem 0 0;
+  background: $--color-primary-light-8;
+}
+
+.el-dialog__footer {
+  padding: 10px 20px;
+  background: $--color-primary-light-8;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* disabled input background */
+.el-input.is-disabled .el-input__inner {
+  background-color: $--color-primary-light-9;
+  color: #8a8a8a;
+}
+
+/* NProgress */
+#nprogress .bar {
+  background: transparent !important; //自定义颜色
+  background-image: linear-gradient(
+    to right,
+    $--color-primary-light-7,
+    $--color-primary-light-1
+  ) !important;
+  height: 0.25rem;
+}
+
+#nprogress .peg {
+  box-shadow: none !important;
+}
+
+/* tr hover */
+.hover-row > td {
+  background-color: $--color-primary-light-9 !important;
+}
+
+// 共用scrollBar
+.customScrollBar {
+  &::-webkit-scrollbar {
+    z-index: 11;
+    width: 6px;
+
+    &:horizontal {
+      height: 6px;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 6px;
+    background: #69696982;
+    // opacity: 0.5;
+  }
+
+  &::-webkit-scrollbar-corner,
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+    width: 6px;
+  }
+}
+
+// 共用formContainer
+.formContainer {
+  padding: 8px 16px;
+  overflow: auto;
+  height: calc(100% - 50px);
+  // height: auto;
+}
+
+// 頭像上傳
+.avatar-uploader {
+  background: #949596;
+  height: 240px;
+  width: 240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #4f4f50;
+  }
+
+  @include rwd($lg) {
+    height: 200px;
+    width: 200px;
+    margin-top: 1rem;
+  }
+
+  .el-upload {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  i {
+    font-size: 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.buttonFlexBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.textNoWrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.custom-theme .el-dialog__body {
+  max-height: calc(70vh - 54px - 70px);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    z-index: 11;
+    width: 6px;
+
+    &:horizontal {
+      height: 6px;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 6px;
+    background: #69696982;
+    // opacity: 0.5;
+  }
+
+  &::-webkit-scrollbar-corner,
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+    width: 6px;
+  }
+}

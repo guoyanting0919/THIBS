@@ -1,0 +1,42 @@
+/* ---------- Breakpoint ---------- */
+$xs: 575.98px;
+$sm: 767.98px;
+$md: 1023.98px;
+$l: 1239.98px;
+$lg: 1439.98px;
+
+// color
+$colorWhite: #ffffff;
+$colorBlack: #232323;
+$colorGray: #f5f5f5;
+$colorOrange: #f2961a;
+
+/* element UI variables */
+$--color-primary: #f2961a;
+// $--color-primary: #020070;
+$--color-success: #409167;
+$--color-warning: #13c2c2;
+$--color-danger: #d63737;
+$--color-info: #227294;
+$--color-white: #ffffff !default;
+$--color-black: #000000 !default;
+
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default;
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default;
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
+
+$--color-primary-dark-1: mix($--color-black, $--color-primary, 10%) !default;
+$--color-primary-dark-2: mix($--color-black, $--color-primary, 20%) !default;
+$--color-primary-dark-3: mix($--color-black, $--color-primary, 30%) !default;
+$--color-primary-dark-4: mix($--color-black, $--color-primary, 40%) !default;
+$--color-primary-dark-5: mix($--color-black, $--color-primary, 50%) !default;
+$--color-primary-dark-6: mix($--color-black, $--color-primary, 60%) !default;
+$--color-primary-dark-7: mix($--color-black, $--color-primary, 70%) !default;
+$--color-primary-dark-8: mix($--color-black, $--color-primary, 80%) !default;
+$--color-primary-dark-9: mix($--color-black, $--color-primary, 90%) !default;

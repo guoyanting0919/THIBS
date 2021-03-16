@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.breads {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  @include rwd($md) {
+    display: none;
+  }
+
+  .breadLink {
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,62 @@
+.todaypickup {
+  .el-select {
+    margin-right: 0.5rem;
+
+    @include rwd($sm) {
+      width: 150px;
+      margin: 0;
+      margin-left: 0.25rem;
+    }
+  }
+
+  .todayDataContainer {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    @include rwd($md) {
+      flex-wrap: wrap;
+      //   align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .dataBox {
+    width: calc(90% / 5);
+    max-width: 220px;
+    padding: 0.5rem 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px #979797;
+
+    @include rwd($md) {
+      width: 200px;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+
+    .iconfont {
+      text-align: center;
+      font-size: 100px;
+      color: $--color-primary;
+    }
+
+    p,
+    .card-panel-num {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .chartMargin {
+    margin-top: 1rem;
+  }
+}

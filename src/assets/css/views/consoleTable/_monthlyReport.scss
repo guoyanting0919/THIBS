@@ -1,0 +1,11 @@
+.monthlyReport {
+  .el-select {
+    margin-right: 0.5rem;
+
+    @include rwd($sm) {
+      width: 150px;
+      margin: 0;
+      margin-left: 0.25rem;
+    }
+  }
+}
