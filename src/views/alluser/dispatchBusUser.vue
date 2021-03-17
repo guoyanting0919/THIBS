@@ -125,6 +125,18 @@ export default {
         toStationName: "",
         passengerNum: 1,
         remark: "",
+
+        // userId: "string",
+        // orderNo: "string",
+        // reserveDate: "2021-03-16T08:48:36.088Z",
+        // orderIdentity: "string",
+        // district: "string",
+        // stationLineId: "string",
+        // stationLineName: "string",
+        // fromStationId: "string",
+        // fromStationName: "string",
+        // toStationId: "string",
+        // toStationName: "string",
       },
       rules: {
         date: [{ required: true, message: "必填欄位", tigger: "change" }],
@@ -180,6 +192,7 @@ export default {
           r.weekArr.sort();
         });
         vm.lineList = res.data;
+        console.log(vm.lineList);
       });
     },
 
@@ -193,6 +206,7 @@ export default {
       };
       busStations.load(query).then((res) => {
         vm.stopList = res.data;
+        console.log(vm.stopList);
       });
     },
 
@@ -208,6 +222,7 @@ export default {
       vm.temp.fromStationId = "";
       vm.temp.toStationId = "";
       busStationLines.get({ id: vm.temp.stationLineId }).then((res) => {
+        console.log(res, vm.stopList);
         vm.stopList.forEach((s) => {
           if (res.result.assignLineStations.includes(s.id)) {
             s.disabled = false;

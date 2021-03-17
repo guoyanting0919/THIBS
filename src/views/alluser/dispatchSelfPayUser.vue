@@ -23,7 +23,9 @@
               <el-row :gutter="16">
                 <el-col :sm="12" :md="6">
                   <el-form-item label="乘客姓名" prop="name">
-                    <el-input v-model="temp.name" placeholder="請輸入乘客姓名"></el-input>
+                    <el-select filterable v-model="temp.name" placeholder="請選擇乘客" style="width: 100%">
+                      <el-option v-for="user in userList" :value="user.name" :label="user.name" :key='user.id'></el-option>
+                    </el-select>
                   </el-form-item>
                 </el-col>
 
@@ -173,6 +175,7 @@ import Title from "@/components/ConsoleTableTitle";
 import SubTitle from "@/components/SubTitle";
 
 import * as orderSelfPayUser from "@/api/orderSelfPayUser";
+import * as userInfo from "@/api/userInfo";
 import * as map from "@/api/map";
 export default {
   name: "dispatchSelfPay",
@@ -188,8 +191,8 @@ export default {
       today: "",
       /* 權限按鈕 */
       buttons: [],
-      /* 用戶資料 */
-      userInfo: "",
+      /* 用戶列表 */
+      userList: "",
 
       // 表單相關
       labelPosition: "top",
@@ -277,6 +280,13 @@ export default {
       return this.buttons.includes(domId);
     },
 
+    getUsers() {
+      userInfo.load({ limit: 9999 }).then((res) => {
+        console.log(res);
+        this.userList = res.data;
+      });
+    },
+
     /* 預約訂單 */
     handleReservation() {
       let fun = this.$route.path.split("/")[2] === "edit" ? "update" : "add";
@@ -325,6 +335,7 @@ export default {
   },
   async mounted() {
     this.today = moment().format("yyyy-MM-DD");
+    this.getUsers();
     this.getOrder();
   },
 };

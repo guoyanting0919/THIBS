@@ -79,8 +79,8 @@
             <el-col :sm="12" :md="6">
               <el-form-item label="性別" prop="sex">
                 <el-select v-model="temp.sex" placeholder="請選擇性別" style="width: 100%">
-                  <el-option :value="'1'" :label="'男'"></el-option>
-                  <el-option :value="'0'" :label="'女'"></el-option>
+                  <el-option :value="'男'" :label="'男'"></el-option>
+                  <el-option :value="'女'" :label="'女'"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
