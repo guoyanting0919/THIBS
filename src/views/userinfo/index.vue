@@ -20,7 +20,7 @@
 
           <el-table-column min-width="130" property="isLowIncome" :label="'是否為低收入戶'" align="center">
             <template slot-scope="scope">
-              <span>{{ scope.row.isLowIncome == 1 ? '是' : '否' }}</span>
+              <span>{{ scope.row.isLowIncome }}</span>
             </template>
           </el-table-column>
 
