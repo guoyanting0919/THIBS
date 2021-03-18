@@ -186,8 +186,8 @@ export default {
 
       // input
       isForget: 1,
-      accountInput: "CBSD_ADMIN",
-      passwordInput: "CBSD_ADMIN",
+      accountInput: "",
+      passwordInput: "",
       accountForgetInput: "test",
       codeInput: "",
       newPwInput: "",
