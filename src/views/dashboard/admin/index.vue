@@ -8,17 +8,18 @@
       frameborder="0"
       scrolling="auto"
     ></iframe> -->
-    <div class="driverApp" v-if="isDev">
+    <!-- <div class="driverApp" v-if="isDev">
       <el-input v-model="despatchNo" placeholder="請輸入訂單ID" style='width:200px;margin-right:1rem'></el-input>
       <el-button @click="changeStatus(3)" type="success">已抵達</el-button>
       <el-button @click="changeStatus(4)" type="success">客上</el-button>
       <el-button @click="changeStatus(5),orderPay" type="info">收款 + 完成</el-button>
       <el-button @click="changeStatus(9,'SYS_ORDERCANCEL_REMARK_DRIVER')" type="danger">取消</el-button>
       <div class="resMessage">{{resMessage}}</div>
-    </div>
+    </div> -->
+    <h1>尖石鄉公所交通服務平台</h1>
 
     <!-- polyline map -->
-    <div ref="map" id='map' style="width:500px;height:500px"></div>
+    <!-- <div ref="map" id='map' style="width:500px;height:500px"></div> -->
   </div>
 </template>
   <script
@@ -196,17 +197,23 @@ export default {
     },
   },
   mounted() {
-    this.initMap();
+    // this.initMap();
     let arr = this.data.data.map((i) => {
       i.time = moment(i.punchTime).format("yyyy-MM-DD");
       return i;
     });
-    console.log(arr);
-    console.log(this.$gb(arr, "createUserName"));
+    // console.log(arr);
+    // console.log(this.$gb(arr, "createUserName"));
     // this.gb();
   },
   created() {},
 };
 </script>
 <style scoped lang='scss'>
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 90px);
+}
 </style> 
