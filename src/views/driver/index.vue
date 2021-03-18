@@ -3,15 +3,15 @@
     <sticky :className="'sub-navbar'">
       <div class="filter-container">
         <!-- 關鍵字搜尋 -->
-        <el-input style="width: 200px; margin-right: 0.5rem" size="mini" v-model="value" clearable placeholder="請輸入關鍵字"></el-input>
+        <!-- <el-input style="width: 200px; margin-right: 0.5rem" size="mini" v-model="value" clearable placeholder="請輸入關鍵字"></el-input>
         <el-select size="mini" @change="end = end + 200" v-model="value" clearable placeholder="可否派發" style="margin-right: 0.5rem">
           <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-        </el-select>
+        </el-select> -->
 
         <!-- 公司選擇 -->
-        <el-select size="mini" v-model="value" clearable placeholder="請選擇公司">
+        <!-- <el-select size="mini" v-model="value" clearable placeholder="請選擇公司">
           <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-        </el-select>
+        </el-select> -->
         <!-- 權限按鈕 -->
         <permission-btn moduleName="builderTables" size="mini" v-on:btn-event="onBtnClicked"></permission-btn>
       </div>
