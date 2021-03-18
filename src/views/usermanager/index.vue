@@ -92,7 +92,7 @@
           <el-form-item size="small" :label="'Id'" prop="id" v-show="dialogStatus == 'update'">
             <el-input v-model="temp.id" :disabled="true" size="small" placeholder="系統自動處理"></el-input>
           </el-form-item>
-          <el-form-item size="small" :label="'姓名'">
+          <el-form-item size="small" :label="'姓名'" prop="name">
             <el-input v-model="temp.name"></el-input>
           </el-form-item>
           <el-form-item size="small" :label="'帳號'" prop="account">
@@ -234,6 +234,13 @@ export default {
       },
       dialogRoleVisible: false, // 分配角色對話框
       rules: {
+        name: [
+          {
+            required: true,
+            message: "姓名不能為空",
+            trigger: "blur",
+          },
+        ],
         account: [
           {
             required: true,
