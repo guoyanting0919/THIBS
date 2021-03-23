@@ -43,10 +43,8 @@
             </el-col>
 
             <el-col :sm="12" :md="6">
-              <el-form-item label="形式" prop="carType">
-                <el-select v-model="temp.carType" placeholder="請選擇形式" style="width: 100%">
-                  <el-option :value="'一般車'" :label="'一般車'"></el-option>
-                </el-select>
+              <el-form-item label="型式" prop="carType">
+                <el-input v-model="temp.carType" placeholder="請輸入型式"></el-input>
               </el-form-item>
             </el-col>
 
@@ -200,7 +198,7 @@ export default {
         seatNum: 1, //載客人數
         carOwner: "", //車輛產權
         releaseDate: "", //發照日期
-        displacement: 0, //排氣量
+        displacement: "", //排氣量
         makeDate: "", //出廠日期
         insuranceNo: "", //保險證號
         insuranceItem: "", //投保項目與金額

@@ -69,8 +69,8 @@
             <el-col :sm="12" :md="6">
               <el-form-item label="是否為低收入戶" prop="isLowIncome">
                 <el-select v-model="temp.isLowIncome" placeholder="請選擇是否為低收入戶" style="width: 100%">
-                  <el-option :value="'是'" :label="'是'"></el-option>
-                  <el-option :value="'否'" :label="'否'"></el-option>
+                  <el-option :value="'Y'" :label="'是'"></el-option>
+                  <el-option :value="'N'" :label="'否'"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
@@ -116,8 +116,8 @@ export default {
         phone: "",
         birthday: "",
         userType: "", //userType
-        isLowIncome: "否", //是否為低收入戶
-        sex: "1",
+        isLowIncome: "", //是否為低收入戶
+        sex: "",
       },
       rules: {
         Id: [{ required: true, message: "請輸入個案編號", trigger: "blur" }],

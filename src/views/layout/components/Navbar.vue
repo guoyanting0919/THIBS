@@ -4,61 +4,34 @@
       <!-- <img class="user-avatar" :src="logo" /> -->
       <div class="user-avatar-text">LOGO</div>
     </div>
-    <hamburger
-      class="hamburger-container"
-      :toggleClick="toggleSideBar"
-      :isActive="sidebar.opened"
-    ></hamburger>
+    <hamburger class="hamburger-container" :toggleClick="toggleSideBar" :isActive="sidebar.opened"></hamburger>
     <div class="breads">
       <!-- breads -->
       <el-breadcrumb separator="/" class="breadItems">
-        <el-breadcrumb-item
-          class="breadLink"
-          :class="{ dark: !themeStatus }"
-          v-for="(item, index) in $route.matched"
-          :key="index"
-        >
-          <router-link
-            :class="{ dark: !themeStatus }"
-            :to="item.path"
-            class="breadLink"
-            >{{ item.meta.title || item.name }}</router-link
-          >
+        <el-breadcrumb-item class="breadLink" :class="{ dark: !themeStatus }" v-for="(item, index) in $route.matched" :key="index">
+          <router-link :class="{ dark: !themeStatus }" :to="item.path" class="breadLink">{{ item.meta.title || item.name }}</router-link>
         </el-breadcrumb-item>
       </el-breadcrumb>
     </div>
-    <el-dropdown
-      class="avatar-container"
-      @command="handleCommand"
-      trigger="click"
-    >
+    <el-dropdown class="avatar-container" @command="handleCommand" trigger="click">
       <div class="avatar-wrapper">
         歡迎您，{{ name }}
         <i class="el-icon-caret-bottom"></i>
       </div>
       <el-dropdown-menu class="user-dropdown" slot="dropdown">
         <el-dropdown-item command="handleGoProfile">
-          <span>個人中心</span>
+          <span>個人資料</span>
         </el-dropdown-item>
         <el-dropdown-item v-if="state">
           <span>
             CBSD_ADMIN
-            <el-switch
-              @change="hadleChange"
-              style="margin-left: 5px"
-              v-model="cbsdAdmin"
-            />
+            <el-switch @change="hadleChange" style="margin-left: 5px" v-model="cbsdAdmin" />
           </span>
         </el-dropdown-item>
         <el-dropdown-item>
           <span>
             切換主題
-            <el-switch
-              :active-value="1"
-              :inactive-value="0"
-              style="margin-left: 5px"
-              v-model="theme"
-            />
+            <el-switch :active-value="1" :inactive-value="0" style="margin-left: 5px" v-model="theme" />
           </span>
         </el-dropdown-item>
         <el-dropdown-item command="logout" divided>
