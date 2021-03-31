@@ -26,7 +26,7 @@ export function loadNoOrg(params) {
 
 export function get(params) {
   return request({
-    url: "/orderOfBusUser/get",
+    url: "/orders/get",
     method: "get",
     params,
   });
@@ -50,7 +50,7 @@ export function receive(data) {
 
 export function add(data) {
   return request({
-    url: "/orderOfBusUser/add",
+    url: "/orders/add",
     method: "post",
     data,
   });
@@ -58,7 +58,7 @@ export function add(data) {
 
 export function update(data) {
   return request({
-    url: "/orderOfBusUser/update",
+    url: "/orders/update",
     method: "post",
     data,
   });

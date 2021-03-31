@@ -215,6 +215,7 @@ export default {
         transferTraffic: "",
         transferOperator: "",
         transferPurpose: "",
+        stationType: "共享車隊",
       },
 
       /* 表單驗證 */
@@ -294,11 +295,12 @@ export default {
       const vm = this;
       vm.$refs.form.validate((valid) => {
         if (valid) {
-          console.log("success");
+          vm.temp.stationType = "共享車隊";
           orderSelfPayUser[fun](vm.temp).then((res) => {
             console.log(res);
             this.$router.push("/orderselfpayuser/index");
           });
+          console.log("success");
         }
       });
     },
@@ -324,6 +326,7 @@ export default {
         orderSelfPayUser.get({ id: this.$route?.params?.id }).then((res) => {
           console.log(res);
           this.temp = JSON.parse(JSON.stringify(res.result));
+          this.temp.stationType = "共享車隊";
           console.log(this.temp);
         });
       }

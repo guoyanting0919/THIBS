@@ -176,6 +176,7 @@ export default {
         StartDate: null,
         EndDate: null,
         page: 1,
+        StationType: "共享車隊",
         limit: 10,
         key: undefined,
         orderby: null, //姓名name 乘車時間reserveDate 起點fromAddr 迄點toAddr + desc
